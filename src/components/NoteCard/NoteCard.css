@@ -1,0 +1,31 @@
+.note-card {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.note-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-card__title {
+  margin: 0;
+  font-size: 16px;
+  color: #111827;
+}
+
+.note-card__delete {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.note-card__date {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #6b7280;
+}
