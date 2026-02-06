@@ -1,0 +1,45 @@
+.note-view-modal {
+  max-width: 500px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.note-view-date {
+  text-align: left;
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.view-modal-title {
+  margin-bottom: 20px;
+}
+
+.view-modal-title h3 {
+  margin: 5px 0 0 0;
+  word-break: break-word;
+  max-height: 60px;
+  overflow-y: auto;
+}
+
+.view-modal-descr {
+  margin-bottom: 20px;
+}
+
+.note-view-description {
+  white-space: pre-wrap;
+  word-break: break-word;
+  height: 180px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.modal-view-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}

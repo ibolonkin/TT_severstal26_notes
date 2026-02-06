@@ -1,7 +1,7 @@
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.4);
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,27 +9,70 @@
 
 .modal {
   background: white;
-  padding: 24px;
+  padding: 12px 24px;
   border-radius: 12px;
-  width: 400px;
+  width: 500px;
+  height: 400px;
 }
 
 .modal label {
   display: block;
-  margin-top: 12px;
-  font-size: 14px;
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.modal input {
+  font-size: 16px;
+  height: 30px;
+}
+
+.modal textarea {
+  height: 160px;
+  font-size: 16px;
+  resize: none;
 }
 
 .modal input,
 .modal textarea {
+  font-family: Arial, Helvetica, sans-serif;
   width: 100%;
-  margin-top: 4px;
-  padding: 8px;
+  border: 1px solid grey;
+  border-radius: 3px;
 }
 
-.modal__actions {
+.modal-actions {
   display: flex;
   justify-content: flex-end;
   gap: 8px;
   margin-top: 16px;
 }
+
+.modal-create-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.modal-create-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.modal-reset-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #dd0000;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.modal-reset-btn:hover {
+  background-color: #b30000;
+}
+

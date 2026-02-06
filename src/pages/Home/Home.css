@@ -4,20 +4,20 @@
   padding: 0 20px;
 }
 
-.home__header {
+.home-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 32px;
 }
 
-.home__title {
+.home-title {
   margin: 0;
   font-size: 22px;
   color: #1f2937;
 }
 
-.home__create-btn {
+.home-create-btn {
   padding: 10px 16px;
   border: none;
   border-radius: 8px;
@@ -27,18 +27,18 @@
   cursor: pointer;
 }
 
-.home__create-btn:hover {
+.home-create-btn:hover {
   background-color: #1d4ed8;
 }
 
-.home__empty {
+.home-empty {
   text-align: center;
   padding: 60px 0;
   color: #6b7280;
-  font-size: 14px;
+  font-size: 16px;
 }
 
-.home__grid {
+.home-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
