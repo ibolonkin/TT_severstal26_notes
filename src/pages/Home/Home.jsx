@@ -9,10 +9,8 @@ const Home = () => {
     const savedNotes = localStorage.getItem('notes');
     return savedNotes ? JSON.parse(savedNotes) : [];
   });
-
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [viewNote, setViewNote] = useState(null);
-  const [editingNote, setEditingNote] = useState(null);
+  const [viewNoteId, setViewNoteId] = useState(null);
 
   useEffect(() => {
     localStorage.setItem('notes', JSON.stringify(notes));
@@ -37,6 +35,8 @@ const Home = () => {
     setNotes((prevNotes) => [newNote, ...prevNotes]);
   };
 
+  const currentNote = notes.find(n => n.id === viewNoteId) || null;
+
   return (
     <div className="home">
       <header className="home-header">
@@ -57,7 +57,7 @@ const Home = () => {
           <NoteCard
             key={note.id}
             note={note}
-            onClick={() => setViewNote(note)}
+            onClick={() => setViewNoteId(note.id)}
             onDelete={deleteNote}
           />
         ))}
@@ -73,9 +73,10 @@ const Home = () => {
       />
 
       <NoteViewModal
-        note={viewNote}
-        isOpen={!!viewNote}
-        onClose={() => setViewNote(null)}
+        note={currentNote}
+        isOpen={!!viewNoteId}
+        onClose={() => setViewNoteId(null)}
+        onUpdate={updateNote}
       />
     </div>
   );

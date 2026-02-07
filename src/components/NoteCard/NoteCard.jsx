@@ -28,7 +28,10 @@ const NoteCard = ({ note, onClick, onDelete }) => {
     <>
       <div
         className="note-card"
-        onClick={onClick}
+        onClick={(e) => {
+          e.stopPropagation();
+          onClick();
+        }}
       >
         <button
           className="note-delete-btn"

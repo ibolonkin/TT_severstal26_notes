@@ -28,7 +28,7 @@ const NoteModal = ({ isOpen, onClose, onSubmit }) => {
   };
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
+    <div className="modal-overlay">
       <div className="modal">
         <h3>Создание заметки</h3>
 
