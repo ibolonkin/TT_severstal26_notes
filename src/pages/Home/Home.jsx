@@ -6,8 +6,17 @@ import NoteViewModal from '../../components/NoteViewModal/NoteViewModal';
 
 const Home = () => {
   const [notes, setNotes] = useState(() => {
-    const savedNotes = localStorage.getItem('notes');
-    return savedNotes ? JSON.parse(savedNotes) : [];
+    try {
+      const savedNotes = localStorage.getItem('notes');
+      if (!savedNotes) return [];
+
+      const parsed = JSON.parse(savedNotes);
+
+      return Array.isArray(parsed) ? parsed : [];
+    } catch (error) {
+      console.error('Ошибка при чтении данных из localstorage:', error);
+      return [];
+    }
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [viewNoteId, setViewNoteId] = useState(null);
@@ -35,7 +44,7 @@ const Home = () => {
     setNotes((prevNotes) => [newNote, ...prevNotes]);
   };
 
-  const currentNote = notes.find(n => n.id === viewNoteId) || null;
+  const currentNote = notes.find((n) => n.id === viewNoteId) || null;
 
   return (
     <div className="home">
